@@ -38,6 +38,24 @@ Example output (console)
 Analysis log saved to: samples/Collybia_nuda_analysis.log
 ```
 
+Future improvements
+
+The following enhancements are under consideration to improve code quality, readability, and statistical rigor:
+
+**Code Quality & Maintainability**
+- Replace dictionary return value with a `dataclass` for better type safety and IDE support
+- Extract formatting logic into a single reusable function to eliminate duplication between console and log output
+- Migrate file path handling to `pathlib.Path` for modern, cross-platform file operations
+
+**Robustness**
+- Improve CSV parsing to automatically strip whitespace: handle formats like `"8.177, 5.515"` seamlessly
+
+**Statistical Enhancements**
+- Add median length and width statistics
+- Compute interquartile range (IQR) for robustness analysis
+- Include min/max of the Q ratio (L/W) across all measurements
+- Consider skewness and kurtosis for distribution shape analysis
+
 Contributing
 - Open issues or pull requests for fixes and improvements.
 - Keep changes minimal and include tests where appropriate.
